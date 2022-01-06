@@ -1,24 +1,26 @@
 import React from 'react';
 
 import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
-import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
+import { Section, SectionDivider, SectionTitle, SectionSubText } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
 const Projects = () => (
-  <Section nopadding id="projects">
+  <Section id="projects">
     <SectionDivider />
     <SectionTitle main>Projects</SectionTitle>
     <GridContainer>
-      {projects.map(({ id, image, title, description, tags, source, visit }) => (
+      {projects.map(({ id, image, title, subtitle, description, tags, code, visit }) => (
 
         <BlogCard key={id}>
           <Img src={image}></Img>
           <TitleContent>
-            <HeaderThree title={title}></HeaderThree>
+            <HeaderThree title={title}>{title}</HeaderThree>
+            <SectionSubText>{subtitle}</SectionSubText>
             <Hr />
           </TitleContent>
           <CardInfo>{description}</CardInfo>
           <div>
+            <Hr />
             <TitleContent>Stack</TitleContent>
             <TagList>
               {tags.map((tag, i) => (
@@ -27,8 +29,10 @@ const Projects = () => (
             </TagList>
           </div>
           <UtilityList>
-            <ExternalLinks href={visit}>Code</ExternalLinks>
-            <ExternalLinks href={source}>Source</ExternalLinks>
+            <ExternalLinks href={visit} target="_blank">Visit</ExternalLinks>
+            {
+              code !== '' ? <ExternalLinks href={code}>Code</ExternalLinks> : ''  
+            }
           </UtilityList>
         </BlogCard>
 

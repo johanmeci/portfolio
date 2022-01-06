@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Img = styled.img`
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 250px;
   object-fit: cover;
   overflow: hidden;
 `
@@ -20,31 +20,35 @@ row-gap: 3rem;
   padding: 2rem;
   padding-bottom: 0;
 }
-
 `
+
 export const BlogCard = styled.div`
+  background: #212D45;
   border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
+  overflow: hidden;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35);
   text-align: center;
   width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
   }
 `;
+
 export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
   width: 100%;
-
 `;
-
 
 export const HeaderThree = styled.h3`
   font-weight: 500;
   letter-spacing: 2px;
   color: #9cc9e3;
   padding: .5rem 0;
-  font-size: ${(props) => props.title ? '3rem' : '2rem'};
+  font-size: ${(props) => props.title ? '2.8rem' : '2rem'};
 `;
 
 export const Hr = styled.hr`
@@ -65,7 +69,6 @@ export const Intro = styled.div`
   line-height: 18px;
 `;
 
-
 export const CardInfo = styled.p`
   width: 100%;
   padding: 0 50px;
@@ -73,12 +76,11 @@ export const CardInfo = styled.p`
   font-style: 2rem;
   line-height: 24px;
   text-align: justify;
+  margin-bottom: auto;
   @media ${(props) => props.theme.breakpoints.sm} {
     padding:.3rem
-  
-}
+  }
 `;
-
 
 export const UtilityList = styled.ul`
   list-style-type: none;
@@ -89,24 +91,26 @@ export const UtilityList = styled.ul`
 `;
 
 export const ExternalLinks = styled.a`
-color:#d4c0c0;
-font-size: 1.6rem;
-padding:1rem 1.5rem;
-background: #6b3030;
-border-radius: 15px;
-transition: 0.5s;
-&:hover{
-  background: #801414;
-
-}
+  width: 80px;
+  color: white;
+  font-size: 1.6rem;
+  padding:1rem 1.5rem;
+  background: #945DD6;
+  border-radius: 25px;
+  transition: 0.5s;
+  font-weight: 500;
+  &:hover{
+    background: #13ADC7;
+  }
 `;
 
 export const TagList = styled.ul`
-display: flex;
-justify-content: space-around;
-padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
 `
+
 export const Tag = styled.li`
-color: #d8bfbf;
-font-size: 1.5rem;
+  color: #d8bfbf;
+  font-size: 1.5rem;
 `
