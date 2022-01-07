@@ -14,7 +14,7 @@ const Hero = (props) => (
       <SectionText>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque modi rem voluptates, obcaecati ea optio error animi.
       </SectionText>
-      <Button onClick={() => window.location = 'https://google.com'}>Learn More</Button>
+      <Button onClick={() => window.location = '#projects'}>See More</Button>
     </LeftSection>
   </Section>
 );
