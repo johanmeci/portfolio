@@ -12,7 +12,7 @@ const Hero = (props) => (
         My Personal Portfolio
       </SectionTitle>
       <SectionText>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque modi rem voluptates, obcaecati ea optio error animi.
+        My purpose is to help people to take their ideas to the next level and build awesome apps.
       </SectionText>
       <Button onClick={() => window.location = '#projects'}>See More</Button>
     </LeftSection>
