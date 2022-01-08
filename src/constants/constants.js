@@ -40,7 +40,7 @@ export const projects = [
     image: 'https://i.ibb.co/2vCzs1j/2.png',
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP'],
     code: '',
-    visit: 'https://www.estudioph.grupo-bedoya.com/',
+    visit: 'https://www.estudioph.grupo-bedoya.com/site',
     id: 3,
   },
   {
