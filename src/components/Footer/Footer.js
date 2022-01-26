@@ -10,7 +10,7 @@ const Footer = () => {
       <LinkList>
         <LinkColumn>
           <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:emaiil@email.com">emaiil@email.com</LinkItem>
+          <LinkItem href="mailto:johanmeci03@gmail.com">johanmeci03@gmail.com</LinkItem>
         </LinkColumn>
       </LinkList>
       <SocialIconsContainer>
@@ -18,7 +18,7 @@ const Footer = () => {
           <Slogan>Innovating one project at time</Slogan>
         </CompanyContainer>
         <SocialContainer>
-          <SocialIcons href="https://github.com">
+          <SocialIcons href="https://github.com/johanmeci">
             <AiFillGithub size="3rem" />
           </SocialIcons>
           <SocialIcons href="https://linkedin.com">

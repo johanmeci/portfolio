@@ -28,8 +28,8 @@ export const projects = [
     description: "Business group that provides online business creation and development services, audiovisual production, corporate image, among others.",
       image: 'https://i.ibb.co/Lt7wKk6/1.png',
       tags: ['HTML', 'CSS', 'JavaScript', 'PHP'],
-    code: '',
-    visit: 'https://gbmediagroup.com/',
+    code: 'https://github.com/johanmeci/p-gbmedia',
+    visit: 'https://w-design.netlify.app',
     id: 2,
   },
   {
