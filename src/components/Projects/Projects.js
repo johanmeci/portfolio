@@ -31,7 +31,7 @@ const Projects = () => (
           <UtilityList>
             <ExternalLinks href={visit} target="_blank">Visit</ExternalLinks>
             {
-              code !== '' ? <ExternalLinks href={code}>Code</ExternalLinks> : ''  
+              code !== '' ? <ExternalLinks href={code} target="_blank">Code</ExternalLinks> : ''  
             }
           </UtilityList>
         </BlogCard>
