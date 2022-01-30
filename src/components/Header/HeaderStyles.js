@@ -1,13 +1,18 @@
 import { IoIosArrowDropdown } from 'react-icons/io';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.header`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
   padding: 1rem;
   padding-top: 2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: ${props => props.theme.colors.background1};
 
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;

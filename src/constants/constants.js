@@ -27,7 +27,7 @@ export const projects = [
     // description: "Grupo empresarial que presta los servicios de creación y desarrollo de negocios online, producción audiovisual, imágen corporativa, entre otras.",
     description: "Business group that provides online business creation and development services, audiovisual production, corporate image, among others.",
       image: 'https://i.ibb.co/Lt7wKk6/1.png',
-      tags: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+      tags: ['React.js', 'SASS', 'JavaScript'],
     code: 'https://github.com/johanmeci/p-gbmedia',
     visit: 'https://w-design.netlify.app',
     id: 2,
