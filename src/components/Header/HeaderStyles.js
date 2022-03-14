@@ -17,7 +17,7 @@ export const Container = styled.header`
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
+    grid-template-rows: repeat(2, 40px);
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
   }
@@ -32,6 +32,10 @@ export const Span = styled.span`
 `;
 
 export const Div1 = styled.div`
+  .span-name {
+    margin-left: 1rem;
+    width: max-content;
+  }
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: row;
@@ -42,6 +46,12 @@ export const Div1 = styled.div`
 `;
 
 export const Div2 = styled.div`
+  li {
+    margin-right: 2rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
   grid-area: 1 / 2 / 2 / 4;
   display: flex;
   justify-content: space-around;
