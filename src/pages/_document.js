@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
       <Html lang='en-GB'>
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-          <title>Web Portfolio</title>
+          <title>Johan Web Developer Portfolio</title>
         </Head>
         <body>
           <Main />
