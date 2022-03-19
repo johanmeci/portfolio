@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AiFillGithub, AiFillLinkedin, AiOutlineMenu } from 'react-icons/ai';
-import { DiCssdeck } from 'react-icons/di';
+import { DiTerminal } from 'react-icons/di';
+
+//AiFillBug
+//DiTerminal
 
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './HeaderStyles';
 
@@ -40,7 +43,8 @@ const Header = () =>  (
     <Div1>
       <Link href="/">
         <a style={{ display: "flex", alignItems: "center", color: "white" }}>
-          <DiCssdeck size="3rem" /><Span className="span-name">Johan Meneses</Span>
+          <DiTerminal size="3rem" />
+          {/* <Span className="span-name">Johan Meneses</Span> */}
         </a>
       </Link>
     </Div1>

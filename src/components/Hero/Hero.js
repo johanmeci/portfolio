@@ -4,12 +4,13 @@ import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponent
 import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection } from './HeroStyles';
 
+
 const Hero = (props) => (
   <Section row nopadding id="sectionTxtHero">
     <LeftSection>
       <SectionTitle main center>
-        Welcome To <br />
-        My Personal Portfolio
+        Hi,<br />
+        I'm Johan Meneses
       </SectionTitle>
       <SectionText>
         My purpose is to help people to take their ideas to the next level and build awesome apps.
