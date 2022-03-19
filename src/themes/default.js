@@ -20,7 +20,7 @@ export default {
     xl: 'screen and (max-width: 1280px)',
     minsm: 'screen and (min-width: 320px)',
     minmd: 'screen and (min-width: 768px)',
-    minlg: 'screen and (max-width: 1024px)',
+    minlg: 'screen and (min-width: 1024px)',
     minxl: 'screen and (min-width: 1200px)'
   },
 }

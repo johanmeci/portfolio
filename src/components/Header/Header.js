@@ -1,9 +1,25 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AiFillGithub, AiFillLinkedin, AiOutlineMenu } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
 
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './HeaderStyles';
+
+if (typeof window !== "undefined") {
+
+  window.addEventListener('scroll', () => {
+
+    const header = document.querySelector('#header');
+
+    if (window.scrollY > 0) {
+      header.classList.add('active');
+    } else {
+      header.classList.remove('active');
+    }
+  
+  });
+
+}
 
 const showNavbar = (e) => {
   e.preventDefault();
@@ -20,7 +36,7 @@ const showNavbar = (e) => {
 }
 
 const Header = () =>  (
-  <Container>
+  <Container id="header">
     <Div1>
       <Link href="/">
         <a style={{ display: "flex", alignItems: "center", color: "white" }}>

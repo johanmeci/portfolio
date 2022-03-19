@@ -8,7 +8,7 @@ export const Layout = ({children}) => {
   return (
     <Container>
      <Header/>
-     <main>{children}</main> 
+     <main style={{ maxWidth: "1280px", margin: "auto" }}>{children}</main> 
      <Footer/>
     </Container>
   )

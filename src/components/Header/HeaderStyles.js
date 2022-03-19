@@ -7,11 +7,16 @@ export const Container = styled.header`
   flex-wrap: wrap;
   align-items: center;
   padding: 1.5rem;
-  position: sticky;
+  position: relative;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 100;
   background-color: ${(props) => props.theme.colors.background1};
+
+  &.active {
+    position: sticky;
+  }
 
   @media ${(props) => props.theme.breakpoints.minlg} {
     padding: 2rem 1.5rem;
@@ -41,9 +46,14 @@ export const Div1 = styled.div`
 export const Div2 = styled.div`
   order: 3;
   flex: 1;
-  padding-top: 1rem;
+  padding: 1rem 0;
   justify-content: space-evenly;
   display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background-color: ${(props) => props.theme.colors.background1};
 
   &.active {
     display: flex;
@@ -63,6 +73,8 @@ export const Div2 = styled.div`
     display: flex;
     flex: 0 1 auto;
     padding-top: 0;
+    width: initial;
+    position: initial;
 
     li {
       margin: 0;

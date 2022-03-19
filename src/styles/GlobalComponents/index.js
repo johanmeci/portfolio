@@ -12,7 +12,7 @@ export const Section = styled.section`
   grid-template-columns: 1fr 1fr;
 
   &#sectionHero {
-    height: calc(100vh - calc(80px + 4rem));
+    height: calc(100vh - calc(80px + 3rem));
     margin: 0;
   }
 
