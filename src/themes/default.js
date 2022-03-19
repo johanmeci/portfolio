@@ -18,6 +18,9 @@ export default {
     md: 'screen and (max-width: 768px)',
     lg: 'screen and (max-width: 1024px)',
     xl: 'screen and (max-width: 1280px)',
+    minsm: 'screen and (min-width: 320px)',
+    minmd: 'screen and (min-width: 768px)',
+    minlg: 'screen and (max-width: 1024px)',
     minxl: 'screen and (min-width: 1200px)'
   },
 }

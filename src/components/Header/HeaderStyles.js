@@ -1,82 +1,88 @@
 import { IoIosArrowDropdown } from 'react-icons/io';
 import styled from 'styled-components';
 
+
 export const Container = styled.header`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
-  padding: 1rem;
-  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1.5rem;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: ${props => props.theme.colors.background1};
+  background-color: ${(props) => props.theme.colors.background1};
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 40px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+  @media ${(props) => props.theme.breakpoints.minlg} {
+    padding: 2rem 1.5rem;
   }
 
-  @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
+  @media ${(props) => props.theme.breakpoints.minxl} {
+    padding: 2rem;
   }
 `;
+
 
 export const Span = styled.span`
   font-size: 2rem;
+  margin-left: 1rem;
+  width: max-content;
 `;
 
+
 export const Div1 = styled.div`
-  .span-name {
-    margin-left: 1rem;
-    width: max-content;
-  }
-  grid-area: 1 / 1 / 2 / 2;
+  order: 1;
   display: flex;
   flex-direction: row;
   align-content: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 1 / 1 / 2 / 3;
-  }
 `;
 
+
 export const Div2 = styled.div`
+  order: 3;
+  flex: 1;
+  padding-top: 1rem;
+  justify-content: space-evenly;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
   li {
     margin-right: 2rem;
     &:last-child {
       margin-right: 0;
     }
   }
-  grid-area: 1 / 2 / 2 / 4;
-  display: flex;
-  justify-content: space-around;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
-  }
 
-  @media screen and (min-width: 768px) {
+  @media ${(props) => props.theme.breakpoints.minmd} {
+    order: 2;
     margin-left: auto;
-    column-gap: 3rem;
+    column-gap: 2rem;
+    display: flex;
+    flex: 0 1 auto;
+    padding-top: 0;
+
+    li {
+      margin: 0;
+    }
   }
 `;
+
 
 export const Div3 = styled.div`
-  grid-area: 1 / 5 / 2 / 6;
+  order: 2;
+  margin-left: auto;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+
+  @media ${(props) => props.theme.breakpoints.minmd} {
+    margin-left: 3rem;
   }
 `;
 
-// Navigation Links
+//Navigation Links
 export const NavLink = styled.a`
   font-size: 2rem;
   line-height: 32px;
@@ -114,7 +120,8 @@ export const NavLink = styled.a`
   }
 `;
 
-/// DropDown Contact
+
+//DropDown Contact
 export const ContactDropDown = styled.button`
   border: none;
   display: flex;
@@ -142,6 +149,7 @@ export const ContactDropDown = styled.button`
   }
 `;
 
+
 export const NavProductsIcon = styled(IoIosArrowDropdown)`
   margin-left: 8px;
   display: flex;
@@ -161,16 +169,46 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
 `;
 
 
-// Social Icons 
+//Social Icons 
 export const SocialIcons = styled.a`
-transition: 0.3s ease;
-color: white;
-border-radius: 50px;
-  padding: 8px;
-&:hover {
+  width: 35px;
+  height: 35px;
+  color: white;
+  margin-right: .8rem;
+  transition: 0.3s ease;
+  border-radius: 50%;
+  display: flex;
+
+  svg {
+    margin: auto;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover:not(:last-child),
+  &:last-child.active {
     background-color: #212d45;
-    transform: scale(1.2);
-    cursor: pointer;
-    
+    transform: scale(1.1);
+  }
+
+  @media ${(props) => props.theme.breakpoints.minmd} {
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.minlg} {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 `
