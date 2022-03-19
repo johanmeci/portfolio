@@ -11,6 +11,15 @@ export const Section = styled.section`
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
 
+  &#sectionHero {
+    height: calc(100vh - calc(80px + 4rem));
+    margin: 0;
+  }
+
+  &#sectionTxtHero {
+    margin: auto;
+  }
+
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 24px 48px 0;
     flex-direction: column;

@@ -11,7 +11,7 @@ import { Section } from '../styles/GlobalComponents';
 const Home = () => {
   return (
     <Layout>
-      <Section grid>
+      <Section grid id="sectionHero">
         <Hero />
         <BgAnimation />
       </Section>
