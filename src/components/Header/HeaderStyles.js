@@ -12,10 +12,11 @@ export const Container = styled.header`
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: ${(props) => props.theme.colors.background1};
+  background-color: ${(props) => props.theme.colors.backgroundAlt};
 
   &.active {
     position: sticky;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 10%);
   }
 
   @media ${(props) => props.theme.breakpoints.minlg} {
@@ -34,15 +35,27 @@ export const Span = styled.span`
   width: max-content;
 `;
 
-
+//Div Logo
 export const Div1 = styled.div`
   order: 1;
   display: flex;
   flex-direction: row;
   align-content: center;
+
+  svg {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.minmd} {
+    svg {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
 `;
 
-
+//Div Menu
 export const Div2 = styled.div`
   order: 3;
   flex: 1;
@@ -53,7 +66,7 @@ export const Div2 = styled.div`
   width: 100%;
   top: 100%;
   left: 0;
-  background-color: ${(props) => props.theme.colors.background1};
+  background-color: ${props => props.theme.colors.backgroundAlt};
 
   &.active {
     display: flex;
@@ -82,7 +95,7 @@ export const Div2 = styled.div`
   }
 `;
 
-
+//Div Icons
 export const Div3 = styled.div`
   order: 2;
   margin-left: auto;
@@ -91,6 +104,8 @@ export const Div3 = styled.div`
 
   @media ${(props) => props.theme.breakpoints.minmd} {
     margin-left: 3rem;
+    position: relative;
+    top: -4px;
   }
 `;
 

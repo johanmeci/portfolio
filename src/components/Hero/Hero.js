@@ -8,12 +8,12 @@ import { LeftSection } from './HeroStyles';
 const Hero = (props) => (
   <Section row nopadding id="sectionTxtHero">
     <LeftSection>
-      <SectionTitle main center>
+      <SectionTitle main center id="titleHero">
         Hi,<br />
-        I'm Johan Meneses
+        I'm Johan
       </SectionTitle>
       <SectionText>
-        My purpose is to help people to take their ideas to the next level and build awesome apps.
+        Web Developer, my purpose is to help people to take their ideas to the next level and build awesome apps.
       </SectionText>
       <Button onClick={() => window.location = '#projects'}>See More</Button>
     </LeftSection>

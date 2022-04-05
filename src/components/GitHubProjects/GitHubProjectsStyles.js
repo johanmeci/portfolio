@@ -107,7 +107,7 @@ export const BoxTxt = styled.p`
     font-size: 14px;
   }
 
-  @media ${props => props.theme.breakpoints.md}{
+  @media ${props => props.theme.breakpoints.minmd}{
     font-size: 16px;
     line-height: 20px;
     margin-top: 1rem;

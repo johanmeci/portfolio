@@ -1,19 +1,34 @@
 import styled from 'styled-components'
 
-export const Section = styled.section`
-  display: ${(props) => props.grid ? "grid" : "flex" };
-  flex-direction: ${(props) => props.row ? "row" : "column" };
-  padding: ${(props) => props.nopadding ? "0" : "32px 48px 0" } ;
-  margin: 2rem auto 0 auto;
-  max-width: 1040px;
-  box-sizing: content-box;
+export const DivContainer = styled.div`
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0;
+  height: 100%;
+  display: grid;
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
 
+  @media ${(props) => props.theme.breakpoints.minmd} {
+    padding: 5rem;
+  }
+`
+
+export const Section = styled.section`
   &#sectionHero {
-    height: calc(100vh - calc(80px + 3rem));
-    margin: 0;
+    width: 100%;
+    margin-top: -7rem;
+    height: 100vh;
+    background-color: ${props => props.theme.colors.backgroundAlt};
+    position: relative;
+
+    #svgLine {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
   }
 
   &#sectionTxtHero {
@@ -27,7 +42,6 @@ export const Section = styled.section`
 
   @media ${(props) => props.theme.breakpoints.sm} {
     padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
-
     width: calc(100vw - 32px);
     flex-direction: column;
   }
@@ -39,11 +53,14 @@ export const SectionTitle = styled.h2`
   line-height: ${(props) => props.main ? '72px' : '56px'};
   width: max-content;
   max-width: 100%;
-  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #EBEBEB;
   margin-bottom: 16px;
   padding: ${(props) => props.main ? '58px 0 16px' : '0'};
+
+  &#titleHero {
+    font-size: 7.6rem;
+    line-height: 70px;
+  }
 
   @media ${props => props.theme.breakpoints.md}{
     font-size: ${(props) => props.main ? '56px' : '48px'};
