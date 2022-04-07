@@ -33,6 +33,8 @@ export const Section = styled.section`
 
   &#sectionTxtHero {
     margin: auto;
+    position: relative;
+    z-index: 1;
   }
 
   @media ${(props) => props.theme.breakpoints.md} {
@@ -44,6 +46,18 @@ export const Section = styled.section`
     padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
     width: calc(100vw - 32px);
     flex-direction: column;
+  }
+
+  @media ${(props) => props.theme.breakpoints.minmd} {
+    &#sectionHero {
+      .containerSVG {
+        display: flex;
+        img {
+          margin: auto;
+          width: 100%;
+        }
+      }
+    }
   }
 `
 
