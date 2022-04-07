@@ -22,6 +22,22 @@ const GlobalStyles = createGlobalStyle`
     cursor: default;
 
   }
+
+  @media screen and (min-width: 1024px) {
+    body::-webkit-scrollbar {
+        width: 4px
+    }
+
+    body::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background: #FFF;
+        border-radius: 4px
+    }
+  }
+
   h1,h2,h3,h4,h5,h6,button {
     font-family: ${props => props.theme.fonts.title};
   }

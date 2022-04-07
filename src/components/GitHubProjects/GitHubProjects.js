@@ -6,7 +6,7 @@ import { Boxes, Box, Img, BoxTitle, BoxTxt, BoxLinks, BoxLink, TagList, Tag } fr
 import { githubProjects } from '../../constants/constants';
 
 export const GitHubProjects = () => (
-  <Section id="github-projects">
+  <Section id="github">
     <SectionDivider />
     <SectionTitle main>Github Projects</SectionTitle>
     <Boxes>

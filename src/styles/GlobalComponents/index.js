@@ -58,6 +58,14 @@ export const Section = styled.section`
 
   }
 
+  &#sectionGithub {
+    background-color: ${props => props.theme.colors.backgroundAlt};
+
+    .divContainer.github {
+      grid-template-columns: inherit;
+    }
+  }
+
 
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 24px 48px 0;
