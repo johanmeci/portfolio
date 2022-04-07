@@ -17,6 +17,13 @@ export const DivContainer = styled.div`
 `
 
 export const Section = styled.section`
+
+  &.sectionContent {
+    width: 100%;
+    padding: 0 1.5rem 9rem 1.5rem;
+    position: relative;
+  }
+
   &#sectionHero {
     width: 100%;
     margin-top: -7rem;
@@ -24,11 +31,12 @@ export const Section = styled.section`
     background-color: ${props => props.theme.colors.backgroundAlt};
     position: relative;
 
-    #svgLine {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
+  }
+
+  #svgLine {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 
   &#sectionTxtHero {
@@ -36,6 +44,20 @@ export const Section = styled.section`
     position: relative;
     z-index: 1;
   }
+
+  &#sectionProjects {
+
+    .divContainer.projects {
+      grid-template-columns: 1fr;
+    }
+
+    #projects {
+      width: 100%;
+      padding: 2rem 0 0 0;
+    }
+
+  }
+
 
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 24px 48px 0;
@@ -74,6 +96,11 @@ export const SectionTitle = styled.h2`
   &#titleHero {
     font-size: 7.6rem;
     line-height: 70px;
+    font-weight: 300;
+
+    .titleName {
+      font-weight: 800;
+    }
   }
 
   @media ${props => props.theme.breakpoints.md}{

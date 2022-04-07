@@ -24,7 +24,7 @@ row-gap: 3rem;
 
 export const BlogCard = styled.div`
   background: #212D45;
-  border-radius: 10px;
+  border-radius: 2px;
   overflow: hidden;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35);
   text-align: center;
