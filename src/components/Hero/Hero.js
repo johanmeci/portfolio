@@ -13,7 +13,7 @@ const Hero = (props) => (
         I'm <span className="titleName">Johan</span>
       </SectionTitle>
       <SectionText>
-        Creative web developer, dedicated to developing and optimizing interactive, user-friendly and feature-rich websites. 
+        I am passionate about the constant knowledge about web and application development, in order to contribute to the improvement of processes for the daily life of people.
       </SectionText>
       <Button onClick={() => window.location = '#projects'}>See More</Button>
     </LeftSection>
